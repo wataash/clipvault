@@ -1,0 +1,34 @@
+[Unit]
+Description=Private clipboard archive (append only)
+Requires=clipvault.socket
+After=clipvault.socket
+
+[Service]
+Type=simple
+User=clipvault
+Group=clipvault
+ExecStart=/usr/bin/python3 -I /usr/local/lib/clipvault/clipvault.py serve
+StateDirectory=clipvault
+StateDirectoryMode=0700
+UMask=0077
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+PrivateNetwork=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_UNIX
+RestrictSUIDSGID=yes
+LockPersonality=yes
+CapabilityBoundingSet=
+LimitCORE=0
+MemoryMax=256M
+TasksMax=16
+
+[Install]
+WantedBy=multi-user.target

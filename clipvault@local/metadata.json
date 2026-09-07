@@ -1,0 +1,8 @@
+{
+  "uuid": "clipvault@local",
+  "name": "ClipVault",
+  "description": "Append clipboard changes to a private system archive; authenticated restoration via clipvault.",
+  "shell-version": ["50"],
+  "session-modes": ["user", "unlock-dialog"],
+  "version": 1
+}

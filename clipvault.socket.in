@@ -1,0 +1,14 @@
+[Unit]
+Description=Append-only clipboard archive socket
+
+[Socket]
+ListenStream=/run/clipvault/append.sock
+SocketUser=@USER@
+SocketGroup=clipvault
+SocketMode=0600
+DirectoryMode=0755
+RemoveOnStop=yes
+Backlog=16
+
+[Install]
+WantedBy=sockets.target

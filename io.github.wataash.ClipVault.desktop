@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=ClipVault
+Comment=Search and restore clipboard history
+Exec=/usr/local/bin/clipvault-gui
+Icon=edit-paste
+Terminal=false
+Categories=Utility;
+Keywords=clipboard;history;copy;paste;
