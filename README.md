@@ -3,6 +3,8 @@
 Archives the GNOME 50 / Wayland clipboard automatically and requires sudo authentication to restore from it.
 Processes running as the login user are not given permission to read the stored history.
 
+![The GTK browser with an archived image selected: the format list, the preview and the restore action](screenshot.webp)
+
 ## Files
 
 | File | Role |
